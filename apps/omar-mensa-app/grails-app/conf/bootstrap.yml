@@ -1,6 +1,6 @@
 spring:
   application:
-    name: o2-mensa
+    name: omar-mensa
   cloud:
     config:
       enabled: false
