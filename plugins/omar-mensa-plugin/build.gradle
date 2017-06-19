@@ -59,7 +59,14 @@ dependencies {
     exclude module: "slf4j-log4j12"
     exclude module: "xml-apis"
   }
+  if(System.env.O2_DEV_HOME)
+  {
+    compile project(':omar-oms-plugin')
+  }
+  else
+  {
   compile(group: "io.ossim.omar.plugins", name: "omar-oms-plugin", version: "1.0.0-${buildVersionTag}", changing: jarArtifactsChanging)
+  }
   compile "org.springframework.boot:spring-boot-starter-logging"
   compile "org.springframework.boot:spring-boot-autoconfigure"
   compile "org.grails:grails-core"
