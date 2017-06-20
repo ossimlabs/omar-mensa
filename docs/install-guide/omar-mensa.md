@@ -18,3 +18,7 @@ Ref: [omar-ossim-base](../../../omar-ossim-base/docs/install-guide/omar-ossim-ba
 
 ## JAR
 `http://artifacts.radiantbluecloud.com/artifactory/webapp/#/artifacts/browse/tree/General/omar-local/io/ossim/omar/apps/omar-mensa-app`
+
+## Configuration
+
+There are no additional YAML properties other than the common properties found [Common Config Settings](../../../omar-common/docs/install-guide/omar-common#common-config-settings).
