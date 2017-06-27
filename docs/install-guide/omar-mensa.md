@@ -17,8 +17,8 @@ CMD java -server -Xms256m -Xmx1024m -Djava.awt.headless=true -XX:+CMSClassUnload
 Ref: [omar-ossim-base](../../../omar-ossim-base/docs/install-guide/omar-ossim-base/)
 
 ## JAR
-`http://artifacts.radiantbluecloud.com/artifactory/webapp/#/artifacts/browse/tree/General/omar-local/io/ossim/omar/apps/omar-mensa-app`
+[http://artifacts.radiantbluecloud.com/artifactory/webapp/#/artifacts/browse/tree/General/omar-local/io/ossim/omar/apps/omar-mensa-app](http://artifacts.radiantbluecloud.com/artifactory/webapp/#/artifacts/browse/tree/General/omar-local/io/ossim/omar/apps/omar-mensa-app)
 
 ## Configuration
 
-There are no additional YAML properties other than the common properties found [Common Config Settings](../../../omar-common/docs/install-guide/omar-common#common-config-settings).
+There are no additional YAML properties other than the common properties found [Common Config Settings](../../../omar-common/docs/install-guide/omar-common/#common-config-settings).
