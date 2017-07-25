@@ -8,7 +8,9 @@ buildscript {
           "FROM ${project.dockerNamespaceUrl}${project.ext.baseImage}:${project.dockerAppTag}",
 
           "MAINTAINER RadiantBlue Technologies radiantblue.com",
-          "ENV HOME /usr/share/omar",
+          """ENV SPRING_CLOUD_CONFIG_ENABLED=true \\
+                       SPRING_CLOUD_DISCOVERY_ENABLED=true \\
+                       HOME=/usr/share/omar""",
           "COPY run.sh /usr/share/omar/run.sh",
           "COPY riofs.conf.xml /usr/share/omar/riofs.conf.xml",
           """RUN useradd -u 1001 -r -g 0 -d \$HOME -s /sbin/nologin \
