@@ -12,7 +12,6 @@ buildscript {
                        SPRING_CLOUD_DISCOVERY_ENABLED=true \\
                        HOME=/usr/share/omar""",
           "COPY run.sh /usr/share/omar/run.sh",
-          "COPY riofs.conf.xml /usr/share/omar/riofs.conf.xml",
           """RUN useradd -u 1001 -r -g 0 -d \$HOME -s /sbin/nologin \
                       -c 'Default Application User' omar && \
                  yum -y install nss_wrapper gfuse fuse-libs libevent curl ossim ossim-kakadu-plugin \
