@@ -12,9 +12,19 @@ fi
 #export LD_PRELOAD=/usr/lib64/libnss_wrapper.so
 #export NSS_WRAPPER_PASSWD=/tmp/passwd
 #export NSS_WRAPPER_GROUP=/etc/group
+if [ -z MOUNT_POINT ] ; then
+  export MOUNT_POINT=/s3
+fi
 
-mkdir -p /s3/$BUCKET
-#echo "BUCKET = ${BUCKET}"
-riofs -o allow_other -c /usr/share/omar/riofs.conf.xml  $BUCKET /s3/$BUCKET
-export JAR_FILE=`find /usr/share/omar -name "*.jar"`
+if [ ! -z $BUCKETS ] ; then
+   #!/bin/bash
+   SPLIT_BUCKET=${BUCKETS//\,/ }
+
+   for BUCKET in $SPLIT_BUCKET ; do
+      mkdir -p /s3/$BUCKET
+      goofys -o allow_other $BUCKET /$MOUNT_POINT/$BUCKET
+   done
+fi
+
+export JAR_FILE=`find $HOME -name "*.jar"`
 java -server -Xms256m -Xmx1024m -Djava.awt.headless=true -XX:+CMSClassUnloadingEnabled -XX:+UseGCOverheadLimit -Djava.security.egd=file:/dev/./urandom -jar $JAR_FILE
