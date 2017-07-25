@@ -22,7 +22,7 @@ if [ ! -z $BUCKETS ] ; then
 
    for BUCKET in $SPLIT_BUCKET ; do
       mkdir -p /s3/$BUCKET
-      goofys -o allow_other $BUCKET /$MOUNT_POINT/$BUCKET
+      goofys -f -o allow_other $BUCKET /$MOUNT_POINT/$BUCKET &
    done
 fi
 
