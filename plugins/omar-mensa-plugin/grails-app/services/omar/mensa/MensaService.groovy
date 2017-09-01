@@ -2,7 +2,6 @@ package omar.mensa
 
 import grails.transaction.Transactional
 import joms.oms.ImageModel
-import geoscript.geom.Geometry
 import omar.core.HttpStatus
 import joms.oms.GeodeticEvaluator
 import joms.oms.ossimString
@@ -13,6 +12,11 @@ import joms.oms.ossimDpt
 import joms.oms.ossimGpt
 import omar.oms.GrdToIptsCommand
 import omar.oms.IptsToGrdCommand
+
+import com.vividsolutions.jts.io.WKTReader
+import com.vividsolutions.jts.geom.Coordinate
+import com.vividsolutions.jts.geom.Polygon
+import com.vividsolutions.jts.geom.GeometryFactory
 
 @Transactional
 class MensaService {
@@ -40,7 +44,7 @@ class MensaService {
 
 
         try{
-            geom = Geometry.fromWKT(cmd.pointList);
+            geom = new WKTReader().read(cmd.pointList);
         }
         catch(def e)
         {
@@ -101,7 +105,7 @@ class MensaService {
                         coordinateList << [ecefPoint.x, ecefPoint.y, ecefPoint.z];
 
                         mapProjection.worldToLocal(groundPoint, imagePoint)
-                        utmCoordinateList << [imagePoint.x, imagePoint.y]
+                        utmCoordinateList << ([imagePoint.x, imagePoint.y]  as Coordinate)
                     }
                     else
                     {
@@ -109,17 +113,18 @@ class MensaService {
                         ecefPoint.assign(lastGroundPoint);
                         coordinateList << [ecefPoint.x, ecefPoint.y, ecefPoint.z];
                         mapProjection.worldToLocal(lastGroundPoint, imagePoint)
-                        utmCoordinateList << [imagePoint.x, imagePoint.y]
+                        utmCoordinateList << ([imagePoint.x, imagePoint.y] as Coordinate)
                     }
                 }
 
                 // Add area calculations
-                if(geom instanceof geoscript.geom.Polygon)
+                if(geom instanceof Polygon)
                 {
                     // make sure we complete the loop
                     utmCoordinateList << utmCoordinateList[0]
 
-                    def tempPoly = new geoscript.geom.Polygon([utmCoordinateList])
+                    def geometryFactory = new GeometryFactory()
+                    def tempPoly = geometryFactory.createPolygon(utmCoordinateList as Coordinate[])
 
                     //def tempPoly = new geoscript.geom.Polygon([coordinateList])
                     //def tempPoly2 = new geoscript.geom.Polygon([utmCoordinateList])
@@ -157,7 +162,7 @@ class MensaService {
         if(cmd.pointList instanceof String)
         {
             try{
-                def geom = Geometry.fromWKT(cmd.pointList);
+                def geom = new WKTReader().read(cmd.pointList);
                 if(geom)
                 {
                     def coordinates = geom.coordinates;
@@ -186,7 +191,8 @@ class MensaService {
         if(cmd.pointList instanceof String)
         {
             try{
-                def geom = Geometry.fromWKT(cmd.pointList);
+                def geom = new WKTReader().read(cmd.pointList);
+
                 if(geom)
                 {
                     def coordinates = geom.coordinates;
