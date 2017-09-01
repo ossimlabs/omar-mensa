@@ -53,12 +53,8 @@ dependencyManagement {
 }
 
 dependencies {
-  compile( "org.geoscript:geoscript-groovy:1.7.0" ) {
-    exclude module: "ehcache"
-    exclude module: "groovy-all"
-    exclude module: "slf4j-log4j12"
-    exclude module: "xml-apis"
-  }
+  compile group: 'com.vividsolutions', name: 'jts', version: '1.13'
+
   if(System.env.O2_DEV_HOME)
   {
     compile project(':omar-oms-plugin')

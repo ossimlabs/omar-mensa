@@ -70,7 +70,12 @@ class MensaController {
         if(jsonData) requestParams << jsonData
         BindUtil.fixParamNames( DistanceCommand, requestParams )
         bindData( cmd, requestParams )
+
+        // println cmd
+
         HashMap result = mensaService.calculateImageDistance(cmd)
+
+        // println result
 
         response.status = result.status
         render contentType: "application/json", text: result as JSON
