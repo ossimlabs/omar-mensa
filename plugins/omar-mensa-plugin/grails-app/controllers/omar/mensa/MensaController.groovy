@@ -1,9 +1,7 @@
 package omar.mensa
 
-import com.wordnik.swagger.annotations.Api
-import com.wordnik.swagger.annotations.ApiImplicitParam
-import com.wordnik.swagger.annotations.ApiImplicitParams
-import com.wordnik.swagger.annotations.ApiOperation
+import io.swagger.annotations.*
+
 import omar.oms.GrdToIptsCommand
 import omar.oms.IptsToGrdCommand
 import grails.converters.JSON
