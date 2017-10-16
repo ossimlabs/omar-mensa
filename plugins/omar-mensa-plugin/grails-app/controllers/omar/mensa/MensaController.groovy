@@ -107,6 +107,15 @@ class MensaController {
     then it will try to convert as a WKT string and then grab all 
     coordinates. Typical WKT string definitions would be 
     MULTIPOINT(1 1, 2 2, ......)  
+    Is the filename used for the imageToGround calculation. This is typically a path to an image file.
+
+*   **entryId**
+
+    Is the entry of the image. Images can have multiple data entries and this is used to identify which entry we are currenlty using for this image
+
+*   **pointList**
+
+    This can either be JSON array of image points to convert to ground lat, lon, height or could be formatted as a WKT MULTIPOINT string. If the service detects the input is a string and not a JSON array then it will try to convert as a WKT string and then grab all coordinates. Typical WKT string definitions would be MULTIPOINT(1 1, 2 2, ......)  
 
     If the list is formatted as a JSON array the service will assume that the array will have elements formatted in the form of a comma separated list of values [{x:,y:}, {x:,y:}
 
@@ -142,6 +151,7 @@ class MensaController {
      10 degree increment.    
 
 **Example Message Template**:
+
 ```
 {
    "filename": "<Path to File>",
@@ -179,7 +189,7 @@ class MensaController {
     }
 
     @ApiOperation(value = "Convert Image Points to Ground coordinates",
-            consumes= 'application/json',
+            consumes='application/json',
             produces='application/json', 
             httpMethod="POST",
             notes = """
