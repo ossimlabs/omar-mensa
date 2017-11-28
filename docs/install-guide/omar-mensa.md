@@ -1,8 +1,5 @@
 # OMAR MENSA
 
-## Source Location
-[https://github.com/ossimlabs/omar-mensa](https://github.com/ossimlabs/omar-mensa)
-
 ## Purpose
 The OMAR Mensa Service provides mensuration capabilities on the imagery available to the platform. Mensa uses elevation data and other OMAR services to provide measurements on imagery such as along a path or in an area.
 
