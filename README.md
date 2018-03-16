@@ -25,17 +25,17 @@ Only required for Jenkins pipelines or if you are running Artifactory and/or Ope
 3. Install omar-mensa-plugin
 ```
  cd omar-mensa/plugin/omar-mensa-plugin
- ./gradlew clean install
+ gradle clean install
 ```
 
 4. Build/Install omar-mensa-app
 #### Build:
 ```
  cd omar-mensa/apps/omar-mensa-app
- ./gradlew clean build
+ gradle clean build
  ```
 #### Install:
 ```
  cd omar-mensa/apps/omar-mensa-app
- ./gradlew clean install
+ gradle clean install
 ```
