@@ -4,7 +4,7 @@
 
 Tme OMAR Mensuration service receives and handles all user measurement (e.g. area, length, etc.) requests for a particular image.
 
-[![Build Status](https://jenkins.radiantbluecloud.com/buildStatus/icon?job=omar-mensa-dev)]()
+[![Build Status](https://jenkins.ossim.io/buildStatus/icon?job=omar-mensa-dev)]()
 
 ### Required environment variable
 - OMAR_COMMON_PROPERTIES
