@@ -65,19 +65,7 @@ grails {
 }
 
 dependencies {
-/*
-  if(System.env.O2_DEV_HOME)
-  {
-    compile project(':omar-mensa-plugin')
-  }
-  else
-  {
-    compile(group: "io.ossim.omar.plugins", name: "omar-mensa-plugin", version: "1.0.0-${buildVersionTag}", changing: jarArtifactsChanging)
-  }
-*/
-
   compile "de.codecentric:spring-boot-admin-starter-client:${springBootAdminStarterClientV}"
-  //compile "org.springframework.cloud:spring-cloud-starter-zipkin"
   compile "org.springframework.cloud:spring-cloud-starter-config"
   compile "org.springframework.cloud:spring-cloud-starter-eureka"
 
