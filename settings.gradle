@@ -4,13 +4,9 @@ pluginManagement {
     gradlePluginPortal()
   }
 }
-def final O2_DEV_HOME = System.getenv('O2_DEV_HOME')
 
-if ( O2_DEV_HOME ) {
+include 'omar-mensa-app',
+        'omar-mensa-plugin'
 
-   include 'omar-mensa-app',
-           'omar-mensa-plugin'
-
-   project(':omar-mensa-app').projectDir = "${O2_DEV_HOME}/omar-mensa/apps/omar-mensa-app" as File
-   project(':omar-mensa-plugin').projectDir = "${O2_DEV_HOME}/omar-mensa/plugins/omar-mensa-plugin" as File
-}
+project(':omar-mensa-app').projectDir = "${rootProject.projectDir}/apps/omar-mensa-app" as File
+project(':omar-mensa-plugin').projectDir = "${rootProject.projectDir}/plugins/omar-mensa-plugin" as File
