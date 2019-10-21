@@ -1,26 +1,36 @@
 pluginManagement {
-  repositories {
-    maven { url ossimMavenProxy }
-  }
+	repositories {
+		mavenLocal()
+		maven { url ossimMavenProxy }
+		gradlePluginPortal()
+	}
 }
 
-include 'omar-mensa-app',
-        'omar-mensa-plugin'
+rootProject.name='omar-mensa'
 
-project(':omar-mensa-app').projectDir = "${rootProject.projectDir}/apps/omar-mensa-app" as File
-project(':omar-mensa-plugin').projectDir = "${rootProject.projectDir}/plugins/omar-mensa-plugin" as File
+[ 'lib', 'plugin', 'app' ].each { String projectType ->
+	File projectTypeDir = new File( rootDir, "${ projectType }s" )
 
-if ( System.getenv('O2_INLINE_BUILD') ) {
-  def modules = [
-      "omar-core",
-      "omar-oms"
-  ]
+	if ( projectTypeDir.exists() )
+	{
+		projectTypeDir.eachDirMatch( { it.endsWith( projectType ) } ) { File subprojectDir ->
+			include subprojectDir.name
 
-  modules.each { module ->
-    include "${module}-plugin"
-
-    project(":${module}-plugin").projectDir = "${rootProject.projectDir}/../${module}/plugins/${module}-plugin" as File
-  }
+			project( ":${ subprojectDir.name }" ).projectDir = subprojectDir
+		}
+	}
 }
 
+if ( System.getenv( 'O2_INLINE_BUILD' ) )
+{
+	def modules = [ 
+          'omar-core',
+          'omar-oms'
+        ]
 
+	modules.each { module ->
+		include "${ module }-plugin"
+
+		project( ":${ module }-plugin" ).projectDir = "${ rootProject.projectDir }/../${ module }/plugins/${ module }-plugin" as File
+	}
+}
