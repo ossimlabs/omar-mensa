@@ -12,5 +12,5 @@ dependencies {
     if ( ! System.getenv('O2_INLINE_BUILD') ) {
        compile "io.ossim.omar.plugins:omar-oms-plugin:+"
     }
-    compile "com.vividsolutions:jts:1.13"
+    compile group: 'org.locationtech.jts', name: 'jts-core', version: '1.16.1'
 }

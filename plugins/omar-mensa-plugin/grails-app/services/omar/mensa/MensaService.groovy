@@ -13,10 +13,10 @@ import joms.oms.ossimGpt
 import omar.oms.GrdToIptsCommand
 import omar.oms.IptsToGrdCommand
 
-import com.vividsolutions.jts.io.WKTReader
-import com.vividsolutions.jts.geom.Coordinate
-import com.vividsolutions.jts.geom.Polygon
-import com.vividsolutions.jts.geom.GeometryFactory
+import org.locationtech.jts.io.WKTReader
+import org.locationtech.jts.geom.Coordinate
+import org.locationtech.jts.geom.Polygon
+import org.locationtech.jts.geom.GeometryFactory
 
 @Transactional
 class MensaService {
