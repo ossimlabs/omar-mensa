@@ -141,6 +141,11 @@ server:
         context-path: /omar-mensa
     contextPath: ${server.servlet.context-path}
 
+swagger:
+    schemes:
+        - HTTPS
+        - HTTP
+
 management:
   endpoints:
     web:
