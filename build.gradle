@@ -116,6 +116,13 @@ subprojects { project ->
         {
             apply plugin:"org.grails.grails-plugin"
             apply plugin:"org.grails.grails-plugin-publish"
+
+            ext {
+                jarDestination = "${project.projectDir}/build/libs/${project.name}-${version}.jar"
+            }
+
+            io.ossim.gradleDefaults.Publications.addPublication(project, groupName, name, "${buildVersion}-${buildVersionTag}")
+            io.ossim.gradleDefaults.Publications.addRepository(project, mavenPublishUrl, mavenRepoUsername, mavenRepoPassword)                    
         }
 
         apply plugin:"asset-pipeline"
@@ -193,13 +200,6 @@ subprojects { project ->
             {
                 profile "org.grails.profiles:web-plugin"
                 testCompile "org.grails:grails-plugin-testing"
-
-                ext {
-                        jarDestination = "${project.projectDir}/build/libs/${project.name}-${version}.jar"
-                }
-
-                io.ossim.gradleDefaults.Publications.addPublication(project, groupName, name, "${buildVersion}-${buildVersionTag}")
-                io.ossim.gradleDefaults.Publications.addRepository(project, mavenPublishUrl, mavenRepoUsername, mavenRepoPassword)                    
             }
         }
 
