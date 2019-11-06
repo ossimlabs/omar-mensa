@@ -1,10 +1,11 @@
-package mensa.app
+package omar.mensa.plugin
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 
-@EnableDiscoveryClient
+import groovy.transform.CompileStatic
+
+@CompileStatic
 class Application extends GrailsAutoConfiguration {
     static void main(String[] args) {
         GrailsApp.run(Application, args)

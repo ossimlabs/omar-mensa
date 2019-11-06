@@ -1,4 +1,4 @@
-package mensa.app
+package omar.mensa.app
 
 class BootStrap {
 

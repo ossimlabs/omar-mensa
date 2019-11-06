@@ -1,4 +1,4 @@
-package omar.mensa
+package omar.mensa.app
 
 class UrlMappings {
 

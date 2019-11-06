@@ -1,32 +1,6 @@
-spring:
-  application:
-    name: omar-mensa
-  cloud:
-    config:
-      enabled: false
-      uri: http://localhost:8888/omar-config-server
-    discovery:
-      enabled: false
-  boot:
-    admin:
-      url: http://localhost:8082/omar-admin-server/
-      client:
-        prefer-ip: true
 ---
 spring:
-  profiles: production
   cloud:
     config:
+      enabled: ${SPRING_CLOUD_CONFIG_ENABLED:false}
       uri: http://omar-config-server:8888/omar-config-server
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://omar-eureka-server:8761/omar-eureka-server/eureka/
-
-endpoints:
-  enabled: true
-  jmx:
-    enabled: true
-  health:
-    enabled: true
