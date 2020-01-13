@@ -48,7 +48,7 @@ node("${BUILD_NODE}"){
         {
             sh """
             ./gradlew publish \
-                -PossimMavenProxy=${MAVEN_PUBLISH_URL}
+                -PossimMavenProxy=${MAVEN_UPLOAD_URL}
             """
         }
     }
