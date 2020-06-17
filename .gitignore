@@ -11,3 +11,8 @@ out/
 .settings
 .classpath
 prodDb.mv.db
+apps/omar-mensa-app/bin
+plugins/omar-mensa-plugin/bin
+packaged-chart
+*.lock
+charts/*.tgz
