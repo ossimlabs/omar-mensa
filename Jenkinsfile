@@ -72,7 +72,13 @@ podTemplate(
     }
 
     stage ("Generate Swagger Spec") {
-        archiveArtifacts "plugins/*/build/swaggerSpec.json"
+        container('builder') {
+            sh """
+            ./gradlew :omar-mensa-plugin:generateSwaggerDocs \
+                -PossimMavenProxy=${MAVEN_DOWNLOAD_URL}
+            """
+            archiveArtifacts "plugins/*/build/swaggerSpec.json"
+        }
     }
 
     stage ("Publish Nexus"){	
