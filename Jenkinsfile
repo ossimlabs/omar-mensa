@@ -71,6 +71,14 @@ podTemplate(
       }
     }
 
+    stage ("Generate Swagger Spec") {
+        sh """
+        ./gradlew :omar-mensa-plugin:generateSwaggerDocs \
+            -PossimMavenProxy=${MAVEN_DOWNLOAD_URL}
+        """
+        archiveArtifacts "plugins/*/build/swaggerSpec.json"
+    }
+
     stage ("Publish Nexus"){	
       container('builder'){
         withCredentials([[$class: 'UsernamePasswordMultiBinding',
