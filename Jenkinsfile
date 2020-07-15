@@ -30,6 +30,13 @@ podTemplate(
       name: 'helm',
       command: 'cat',
       ttyEnabled: true
+    ),
+    containerTemplate(
+      name: 'cypress',
+      image: 'cypress/base:12.14.1',
+      ttyEnabled: true,
+      command: 'cat',
+      privileged: true
     )
   ],
   volumes: [
@@ -78,6 +85,17 @@ podTemplate(
                 -PossimMavenProxy=${MAVEN_DOWNLOAD_URL}
             """
             archiveArtifacts "plugins/*/build/swaggerSpec.json"
+        }
+    }
+
+    stage ("Run Cypress Test") {
+        container('cypress') {
+            sh """
+            npx cypress run \
+                -PossimMavenProxy=${MAVEN_DOWNLOAD_URL}
+            """
+            junit 'results/*.xml'
+            archiveArtifacts "results/*.xml"
         }
     }
 
