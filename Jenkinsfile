@@ -33,7 +33,7 @@ podTemplate(
     ),
     containerTemplate(
       name: 'cypress',
-      image: 'cypress/base:12.14.1',
+      image: "${DOCKER_REGISTRY_DOWNLOAD_URL}/omar-cypress:12.14.1",
       ttyEnabled: true,
       command: 'cat',
       privileged: true

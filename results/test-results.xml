@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites name="Mocha Tests" time="0" tests="14" failures="14">
-  <testsuite name="Root Suite" timestamp="2020-07-15T18:47:24" tests="0" file="cypress/integration/APITesting.js" failures="0" time="0">
+  <testsuite name="Root Suite" timestamp="2020-07-15T20:26:17" tests="0" file="cypress/integration/APITesting.js" failures="0" time="0">
   </testsuite>
-  <testsuite name="Automated tests for the omar-mensa methods" timestamp="2020-07-15T18:47:24" tests="14" failures="14" time="0">
+  <testsuite name="Automated tests for the omar-mensa methods" timestamp="2020-07-15T20:26:17" tests="14" failures="14" time="0">
     <testcase name="Automated tests for the omar-mensa methods Should test 200 code for chip default values" time="0" classname="Should test 200 code for chip default values">
       <failure message="`cy.request()` failed on:
 
@@ -36,7 +36,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:29 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:22 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain&quot;,
   &quot;content-length&quot;: &quot;62&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -77,7 +77,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:29 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:22 GMT",
   "content-type": "text/plain",
   "content-length": "62",
   "connection": "keep-alive",
@@ -133,7 +133,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:30 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:24 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain&quot;,
   &quot;content-length&quot;: &quot;62&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -174,7 +174,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:30 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:24 GMT",
   "content-type": "text/plain",
   "content-length": "62",
   "connection": "keep-alive",
@@ -230,7 +230,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:30 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:24 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain&quot;,
   &quot;content-length&quot;: &quot;62&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -271,7 +271,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:30 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:24 GMT",
   "content-type": "text/plain",
   "content-length": "62",
   "connection": "keep-alive",
@@ -327,7 +327,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:30 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:24 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain&quot;,
   &quot;content-length&quot;: &quot;62&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -368,7 +368,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:30 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:24 GMT",
   "content-type": "text/plain",
   "content-length": "62",
   "connection": "keep-alive",
@@ -424,7 +424,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:30 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:25 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain&quot;,
   &quot;content-length&quot;: &quot;62&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -465,7 +465,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:30 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:25 GMT",
   "content-type": "text/plain",
   "content-length": "62",
   "connection": "keep-alive",
@@ -521,7 +521,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:30 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:25 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain&quot;,
   &quot;content-length&quot;: &quot;62&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -562,7 +562,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:30 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:25 GMT",
   "content-type": "text/plain",
   "content-length": "62",
   "connection": "keep-alive",
@@ -619,7 +619,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:31 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:25 GMT&quot;,
   &quot;content-type&quot;: &quot;application/json;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -669,7 +669,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:31 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:25 GMT",
   "content-type": "application/json;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
@@ -734,7 +734,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:31 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:25 GMT&quot;,
   &quot;content-type&quot;: &quot;application/json;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -784,7 +784,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:31 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:25 GMT",
   "content-type": "application/json;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
@@ -849,7 +849,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:31 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:25 GMT&quot;,
   &quot;content-type&quot;: &quot;application/json;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -895,7 +895,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:31 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:25 GMT",
   "content-type": "application/json;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
@@ -956,7 +956,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:31 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:26 GMT&quot;,
   &quot;content-type&quot;: &quot;application/json;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -1002,7 +1002,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:31 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:26 GMT",
   "content-type": "application/json;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
@@ -1063,7 +1063,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:31 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:26 GMT&quot;,
   &quot;content-type&quot;: &quot;application/json;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -1109,7 +1109,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:31 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:26 GMT",
   "content-type": "application/json;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
@@ -1170,7 +1170,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:32 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:26 GMT&quot;,
   &quot;content-type&quot;: &quot;application/json;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -1216,7 +1216,7 @@ The response we got was:
 Status: 500 - Server Error
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:32 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:26 GMT",
   "content-type": "application/json;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
@@ -1276,7 +1276,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:32 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:26 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -1317,7 +1317,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:32 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:26 GMT",
   "content-type": "text/plain;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
@@ -1373,7 +1373,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   &quot;server&quot;: &quot;nginx/1.17.10&quot;,
-  &quot;date&quot;: &quot;Wed, 15 Jul 2020 18:47:32 GMT&quot;,
+  &quot;date&quot;: &quot;Wed, 15 Jul 2020 20:26:27 GMT&quot;,
   &quot;content-type&quot;: &quot;text/plain;charset=utf-8&quot;,
   &quot;transfer-encoding&quot;: &quot;chunked&quot;,
   &quot;connection&quot;: &quot;keep-alive&quot;,
@@ -1414,7 +1414,7 @@ The response we got was:
 Status: 400 - Bad Request
 Headers: {
   "server": "nginx/1.17.10",
-  "date": "Wed, 15 Jul 2020 18:47:32 GMT",
+  "date": "Wed, 15 Jul 2020 20:26:27 GMT",
   "content-type": "text/plain;charset=utf-8",
   "transfer-encoding": "chunked",
   "connection": "keep-alive",
