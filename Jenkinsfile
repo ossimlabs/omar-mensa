@@ -89,15 +89,17 @@ podTemplate(
     }
 
     stage ("Run Cypress Test") {
-        container('cypress') {
-            sh """
-            npx cypress run \
-                -PossimMavenProxy=${MAVEN_DOWNLOAD_URL}
-            """
-            junit 'results/*.xml'
-            archiveArtifacts "results/*.xml"
-        }
-    }
+                container('cypress') {
+                    sh """
+                    npm i -g xunit-viewer
+                    xunit-viewer -r results -o results/omar-mensa-test-results.html
+                    """
+                    junit 'results/*.xml'
+                    archiveArtifacts "results/*.xml"
+                    archiveArtifacts "results/*.html"
+                    s3Upload(file:'results/omar-mensa-test-results.html', bucket:'ossimlabs', path:'cypressTests/')
+                }
+            }
 
     stage ("Publish Nexus"){	
       container('builder'){
