@@ -16,3 +16,6 @@ plugins/omar-mensa-plugin/bin
 packaged-chart
 *.lock
 charts/*.tgz
+cypress/screenshots/
+cypress/videos/
+results/
