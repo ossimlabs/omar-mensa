@@ -18,4 +18,4 @@ packaged-chart
 charts/*.tgz
 cypress/screenshots/
 cypress/videos/
-results/
+results/*.xml
