@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.467" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-07-20T20:51:42" tests="0" file="cypress/integration/APITesting.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Automated tests for the omar-mensa methods" timestamp="2020-07-20T20:51:42" tests="6" failures="0" time="5.467">
+    <testcase name="Automated tests for the omar-mensa methods Should test 200 code for groundToImagePoints default values" time="5.204" classname="Should test 200 code for groundToImagePoints default values">
+    </testcase>
+    <testcase name="Automated tests for the omar-mensa methods Should test response header for groundToImagePoints" time="0.063" classname="Should test response header for groundToImagePoints">
+    </testcase>
+    <testcase name="Automated tests for the omar-mensa methods Should test 200 code for imagePointsToGround default values" time="0.054" classname="Should test 200 code for imagePointsToGround default values">
+    </testcase>
+    <testcase name="Automated tests for the omar-mensa methods Should test response header for imagePointsToGround" time="0.051" classname="Should test response header for imagePointsToGround">
+    </testcase>
+    <testcase name="Automated tests for the omar-mensa methods Should test 200 code for imageDistance default values" time="0.048" classname="Should test 200 code for imageDistance default values">
+    </testcase>
+    <testcase name="Automated tests for the omar-mensa methods Should test response header for imageDistance" time="0.047" classname="Should test response header for imageDistance">
+    </testcase>
+  </testsuite>
+</testsuites>
