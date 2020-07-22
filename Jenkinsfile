@@ -94,7 +94,7 @@ podTemplate(
                                                         sh """
                                                         cypress run --headless
                                                         """
-                                                    } finally {
+                                                    } catch (err) {
                                                         sh """
                                                         npm i -g xunit-viewer
                                                         xunit-viewer -r results -o results/omar-mensa-test-results.html
