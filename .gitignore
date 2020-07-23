@@ -18,3 +18,9 @@ packaged-chart
 charts/*.tgz
 cypress/screenshots/
 cypress/videos/
+cypress/fixtures/
+cypress/plugins/
+cypress/support/
+package-lock.json
+results/
+node_modules/
