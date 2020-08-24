@@ -37,7 +37,7 @@ class MensaController {
 *   **entryId**
 
     Is the entry of the image. Images can have multiple data 
-    entries and this is used to identify which entry we are currenlty 
+    entries and this is used to identify which entry we are currently 
     using for this image
 
 *   **pointList**
@@ -59,7 +59,8 @@ class MensaController {
             @ApiImplicitParam(name = 'body',
                     value = "General Message for querying recommendations",
                     paramType = 'body',
-                    dataType = 'string')
+                    dataType = 'string',
+                    defaultValue = "{ filename: '/data/geoint/strips/056599362030_01/056599362030_01_P002_MUL/17APR19054130-M1BS-056599362030_01_P002.NTF', entryId: 0, pointList: 'LINESTRING(14003.649810791016 15219.103088378904, 14774.048736572266 15271.243347167967)'}")
     ])
     def imageDistance()
     {
@@ -171,7 +172,9 @@ class MensaController {
             @ApiImplicitParam(name = 'body',
                     value = "General Message for querying recommendations",
                     paramType = 'body',
-                    dataType = 'string')
+                    dataType = 'string',
+                    defaultValue = "{ 'filename': '/data/geoint/strips/056599362030_01/056599362030_01_P002_MUL/17APR19054130-M1BS-056599362030_01_P002.NTF', 'entryId': 0, 'pointList': ['{'x':14003.649810791016,'y':15219.103088378904}, {'x':14774.048736572266,'y':15271.243347167967} ], 'pqeIncludePositionError':false, 'pqeProbabilityLevel' : 0.9, 'pqeEllipsePointType' : 'none', 'pqeEllipseAngularIncrement': 10}"
+            )
     ])
     def imagePointsToGround()
     {
@@ -234,7 +237,9 @@ class MensaController {
             @ApiImplicitParam(name = 'body',
                     value = "General Message for querying recommendations",
                     paramType = 'body',
-                    dataType = 'string')
+                    dataType = 'string',
+                    defaultValue = "{ filename: \"/data/geoint/strips/056599362030_01/056599362030_01_P002_MUL/17APR19054130-M1BS-056599362030_01_P002.NTF\", entryId: 0, pointList: [{lat:14003.649810791016,lon:15219.103088378904,hgt:0.0}, {lat:14774.048736572266,lon:15271.243347167967}]}"
+            )
     ])
     def groundToImagePoints()
     {

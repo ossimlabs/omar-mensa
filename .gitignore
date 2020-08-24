@@ -16,3 +16,11 @@ plugins/omar-mensa-plugin/bin
 packaged-chart
 *.lock
 charts/*.tgz
+cypress/screenshots/
+cypress/videos/
+cypress/fixtures/
+cypress/plugins/
+cypress/support/
+package-lock.json
+results/
+node_modules/
