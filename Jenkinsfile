@@ -49,7 +49,7 @@ podTemplate(
 {
   node(POD_LABEL){
 
-    stage("Checkout branch $BRANCH_NAME")
+    stage("Checkout branch")
     {
         scmVars = checkout(scm)
 
