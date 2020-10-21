@@ -58,7 +58,7 @@ resources:
     memory: 500Mi
     
 image:
-  name: omar-mensa-app
+  name: omar-mensa
   tag: dev
   pullPolicy: Always
 
