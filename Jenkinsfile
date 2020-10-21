@@ -171,12 +171,12 @@ podTemplate(
         withDockerRegistry(credentialsId: 'dockerCredentials', url: "https://${DOCKER_REGISTRY_DOWNLOAD_URL}") {  //TODO
           if (BRANCH_NAME == 'master'){
                 sh """
-                    docker build --build-arg BASE_IMAGE=${DOCKER_REGISTRY_DOWNLOAD_URL}/ossim-alpine-runtime:dev --network=host -t "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:"${VERSION}" ./docker
+                    docker build --build-arg BASE_IMAGE=${DOCKER_REGISTRY_DOWNLOAD_URL}/ossim-alpine-runtime:dev --network=host -t "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:"${VERSION}" ./docker
                 """
           }
           else {
                 sh """
-                    docker build --build-arg BASE_IMAGE=${DOCKER_REGISTRY_DOWNLOAD_URL}/ossim-alpine-runtime:dev --network=host --network=host -t "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:"${VERSION}".a ./docker
+                    docker build --build-arg BASE_IMAGE=${DOCKER_REGISTRY_DOWNLOAD_URL}/ossim-alpine-runtime:dev --network=host --network=host -t "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:"${VERSION}".a ./docker
                 """
           }
         }
@@ -188,19 +188,19 @@ podTemplate(
           withDockerRegistry(credentialsId: 'dockerCredentials', url: "https://${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}") {
             if (BRANCH_NAME == 'master'){
                 sh """
-                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:"${VERSION}"
+                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:"${VERSION}"
                 """
             }
             else if (BRANCH_NAME == 'dev') {
                 sh """
-                    docker tag "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:"${VERSION}".a "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:dev
-                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:"${VERSION}".a
-                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:dev
+                    docker tag "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:"${VERSION}".a "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:dev
+                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:"${VERSION}".a
+                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:dev
                 """
             }
             else {
                 sh """
-                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa-app:"${VERSION}".a           
+                    docker push "${DOCKER_REGISTRY_PUBLIC_UPLOAD_URL}"/omar-mensa:"${VERSION}".a           
                 """
             }
           }
