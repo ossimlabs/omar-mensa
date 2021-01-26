@@ -1,9 +1,0 @@
-{
-  "baseUrl": "https://omar.ossim.io/omar-mensa",
-  "reporter": "junit",
-  "video": false,
-  "reporterOptions": {
-    "mochaFile": "results/omar-mensa-test-results.xml",
-    "toConsole": false
-  }
-}
