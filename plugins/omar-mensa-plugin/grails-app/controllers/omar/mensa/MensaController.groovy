@@ -102,20 +102,6 @@ class MensaController {
 
 *   **pointList**
 
-    This can either be JSON array of image points to convert to ground 
-    lat, lon, height or could be formatted as a WKT MULTIPOINT string. 
-    If the service detects the input is a string and not a JSON array 
-    then it will try to convert as a WKT string and then grab all 
-    coordinates. Typical WKT string definitions would be 
-    MULTIPOINT(1 1, 2 2, ......)  
-    Is the filename used for the imageToGround calculation. This is typically a path to an image file.
-
-*   **entryId**
-
-    Is the entry of the image. Images can have multiple data entries and this is used to identify which entry we are currenlty using for this image
-
-*   **pointList**
-
     This can either be JSON array of image points to convert to ground lat, lon, height or could be formatted as a WKT MULTIPOINT string. If the service detects the input is a string and not a JSON array then it will try to convert as a WKT string and then grab all coordinates. Typical WKT string definitions would be MULTIPOINT(1 1, 2 2, ......)  
 
     If the list is formatted as a JSON array the service will assume that the array will have elements formatted in the form of a comma separated list of values [{x:,y:}, {x:,y:}
@@ -227,9 +213,9 @@ class MensaController {
    "filename": "<Path to File>",
    "entryId": 0,
    "pointList": [
-           {"lat":0.0,"lon":0.0,hgt:0.0},
+           {"lat":0.0,"lon":0.0,"hgt":0.0},
            {"lat":1.0,"lon":1.0}
-           ],
+           ]
 }
 ```  
     """)
