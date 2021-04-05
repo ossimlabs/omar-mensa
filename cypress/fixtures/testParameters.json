@@ -1,0 +1,314 @@
+{
+  "info": {
+    "title": "Test Parameters",
+    "format": {
+      "name": {
+        "method": ["get", "post", "delete", "etc..."],
+        "endpoint": "/controller/endpoint",
+        "in": ["query", "body", "path"],
+        "expected": ["good", "bad"],
+        "parameters": [{"parameterName1": "value1", "parameterName2": "value2"}, { "body": {} }, { "id": "idValue"}]
+      }
+    }
+  },
+  "tests": {
+    "goodImageDistance": {
+      "method": "post",
+      "endpoint": "/mensa/imageDistance",
+      "in": "body",
+      "expected": "good",
+      "parameters": {
+        "body": {
+          "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif",
+          "entryId": "0",
+          "pointList": "LINESTRING(14003.649810791016 15219.103088378904, 14774.048736572266 15271.243347167967)"
+        }
+      }
+    },
+    "badImageDistance": {
+      "method": "post",
+      "endpoint": "/mensa/imageDistance",
+      "in": "body",
+      "expected": "bad",
+      "parameters": {
+        "body": {
+        }
+      }
+    },
+    "goodImagePointsToGround": {
+      "method": "post",
+      "endpoint": "/mensa/imagePointsToGround",
+      "in": "body",
+      "expected": "good",
+      "parameters": {
+        "body": {
+          "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif",
+          "entryId": 0,
+          "pointList": [
+            {"x":14003.65,"y":15219.103},
+            {"x":14774.05,"y":15271.243}
+          ],
+          "pqeIncludePositionError":false,
+          "pqeProbabilityLevel" : 0.9,
+          "pqeEllipsePointType" : "none",
+          "pqeEllipseAngularIncrement": 10
+        }
+      }
+    },
+    "badImagePointsToGround": {
+      "method": "post",
+      "endpoint": "/mensa/imagePointsToGround",
+      "in": "body",
+      "expected": "bad",
+      "parameters": {
+        "body": {
+        }
+      }
+    },
+    "goodGroundToImagePoints": {
+      "method": "post",
+      "endpoint": "/mensa/groundToImagePoints",
+      "in": "body",
+      "expected": "good",
+      "parameters": {
+        "body": {
+          "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif",
+          "entryId": 0,
+          "pointList": [
+            {"lat":14003.65,"lon":15219.103,"hgt":0.0},
+            {"lat":14774.05,"lon":15271.243}
+          ]
+        }
+      }
+    },
+    "badGroundToImagePoints": {
+      "method": "post",
+      "endpoint": "/mensa/groundToImagePoints",
+      "in": "body",
+      "expected": "bad",
+      "parameters": {
+        "body": {
+        }
+      }
+    },
+    "minGetInfo": {
+      "method": "get",
+      "endpoint": "/dataInfo/getInfo",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif"
+      }
+    },
+    "maxGetInfo": {
+      "method": "get",
+      "endpoint": "/dataInfo/getInfo",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif",
+        "entry": "0"
+      }
+    },
+    "badGetInfo": {
+      "method": "get",
+      "endpoint": "/dataInfo/getInfo",
+      "in": "query",
+      "expected": "bad",
+      "parameters": {
+        "entry": "-5"
+      }
+    },
+    "minImageSpaceGetTile": {
+      "method": "get",
+      "endpoint": "/imageSpace/imageSpaceGetTile",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "x": "1",
+        "y": "1",
+        "z": "0",
+        "outputFormat": "png",
+        "filename": "%2Fdata%2Fharvey%2F2017-01-29%2F1040010027891F00%2F3020113.tif"
+      }
+    },
+    "maxImageSpaceGetTile": {
+      "method": "get",
+      "endpoint": "/imageSpace/imageSpaceGetTile",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "x": "1",
+        "y": "1",
+        "z": "0",
+        "tileSize": "256",
+        "nullPixelFlip": "false",
+        "outputFormat": "png",
+        "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif",
+        "entry": "0",
+        "hist": "/data/harvey/2017-08-31/105001000B95E200/3020113.his",
+        "ovr": "/data/harvey/2017-08-31/105001000B95E200/3020113.ovr",
+        "geom": "/data/harvey/2017-08-31/105001000B95E200/3020113.geom",
+        "bands": "idk",
+        "histOp": "none",
+        "histCenterClip": "0.5",
+        "sharpenMode": "none",
+        "sharpenPercent": "0",
+        "resamplerFilter": "magic",
+        "brightness": "0",
+        "contrast": "1",
+        "histCenterTile": "false",
+        "transparent": "true",
+        "numResLevels": "1",
+        "gamma": "1"
+      }
+    },
+    "badImageSpaceGetTile": {
+      "method": "get",
+      "endpoint": "/imageSpace/imageSpaceGetTile",
+      "in": "query",
+      "expected": "bad",
+      "parameters": {
+      }
+    },
+    "minGetThumbnail": {
+      "method": "get",
+      "endpoint": "/imageSpace/getThumbnail",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif"
+      }
+    },
+    "maxGetThumbnail": {
+      "method": "get",
+      "endpoint": "/imageSpace/getThumbnail",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "size": "256",
+        "outputFormat": "png",
+        "nullPixelFlip": "false",
+        "padThumbnail": "false",
+        "transparent": "false",
+        "id": "3020113",
+        "filename": "/data/harvey/2017-08-31/105001000B95E200/3020113.tif",
+        "hist": "/data/harvey/2017-08-31/105001000B95E200/3020113.his",
+        "ovr": "/data/harvey/2017-08-31/105001000B95E200/3020113.ovr",
+        "histOp": "auto-minmax",
+        "entry": "0"
+      }
+    },
+    "badGetThumbnail": {
+      "method": "get",
+      "endpoint": "/imageSpace/getThumbnail",
+      "in": "query",
+      "expected": "bad",
+      "parameters": {
+      }
+    },
+    "minChip": {
+      "method": "get",
+      "endpoint": "/chipper/chip",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "images%5B0%5D.file": "%2Fdata%2Fharvey%2F2017-01-29%2F1040010027891F00%2F3020113.tif",
+        "cutBboxXywh": "500%2C500%2C500%2C500"
+      }
+    },
+    "maxChip": {
+      "method": "get",
+      "endpoint": "/chipper/chip",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "images%5B0%5D.file": "%2Fdata%2Fharvey%2F2017-01-29%2F1040010027891F00%2F3020113.tif",
+        "images%5B0%5D.entry": "0",
+        "operation": "chip",
+        "nullPixelFlip": "true",
+        "brightness": "0",
+        "contrast": "1",
+        "sharpenMode": "light",
+        "sharpenPercent": "0",
+        "thumbnailResolution": "0",
+        "cutBboxXywh": "500%2C500%2C500%2C500",
+        "rrds": "0",
+        "histOp": "linear",
+        "histBiasFactor": "1",
+        "histLinearClip": "0,5",
+        "histLinearNormClip": "0,5",
+        "histCenterClip": "0.5",
+        "histCenter": "true",
+        "outputRadiometry": "ossim_uint8",
+        "resamplerFilter": "cubic",
+        "outputFormat": "image/png",
+        "keepBands": "false",
+        "padThumbnail": "false",
+        "transparent": "true",
+        "gamma": "0"
+      }
+    },
+    "badChip": {
+      "method": "get",
+      "endpoint": "/chipper/chip",
+      "in": "query",
+      "expected": "bad",
+      "parameters": {
+      }
+    },
+    "minOrtho": {
+      "method": "get",
+      "endpoint": "/chipper/ortho",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "images%5B0%5D.file": "%2Fdata%2Fharvey%2F2017-01-29%2F1040010027891F00%2F3020113.tif",
+        "cutWidth": "556",
+        "cutHeight": "556",
+        "cutWmsBbox": "-95%2C29.7%2C-94.95%2C29.65"
+      }
+    },
+    "maxOrtho": {
+      "method": "get",
+      "endpoint": "/chipper/ortho",
+      "in": "query",
+      "expected": "good",
+      "parameters": {
+        "images%5B0%5D.file": "%2Fdata%2Fharvey%2F2017-01-29%2F1040010027891F00%2F3020113.tif",
+        "images%5B0%5D.entry": "0",
+        "operation": "ortho",
+        "nullPixelFlip": "true",
+        "brightness": "0",
+        "contrast": "1",
+        "sharpenMode": "light",
+        "thumbnailResolution": "1",
+        "cutWidth": "556",
+        "cutHeight": "556",
+        "cutWmsBbox": "-95%2C29.7%2C-94.95%2C29.65",
+        "histOp": "linear",
+        "histBiasFactor": "1",
+        "histLinearClip": "low",
+        "histLinearNormClip": "low",
+        "histCenterClip": "0.5",
+        "histCenter": "true",
+        "srs": "EPSG:4326",
+        "outputRadiometry": "ossim_uint8",
+        "resamplerFilter": "cubic",
+        "outputFormat": "image/jpeg",
+        "keepBands": "false",
+        "padThumbnail": "false",
+        "transparent": "true",
+        "gamma": "1"
+      }
+    },
+    "badOrtho": {
+      "method": "get",
+      "endpoint": "/chipper/ortho",
+      "in": "query",
+      "expected": "bad",
+      "parameters": {
+      }
+    }
+  }
+}
