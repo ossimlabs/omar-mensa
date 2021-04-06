@@ -21,6 +21,7 @@ cypress/videos/
 cypress/fixtures/
 cypress/plugins/
 cypress/support/
+package.json
 package-lock.json
 results/
 node_modules/
